@@ -19,7 +19,8 @@ import (
 
 const (
 	defaultDiscoverTime = time.Second * 3
-	leaseExpireStatic   = 1
+	// TODO(e.burkov): Get rid of this useless stuff.
+	leaseExpireStatic = 1
 )
 
 var webHandlersRegistered = false
@@ -37,12 +38,19 @@ type Lease struct {
 
 // MarshalJSON implements the json.Marshaler interface for *Lease.
 func (l *Lease) MarshalJSON() ([]byte, error) {
+	var expiryStr string
+	if expiry := l.Expiry; expiry.Unix() != leaseExpireStatic {
+		expiryStr = expiry.Format(time.RFC3339)
+	}
+
 	type lease Lease
 	return json.Marshal(&struct {
 		HWAddr string `json:"mac"`
+		Expiry string `json:"expires,omitempty"`
 		*lease
 	}{
 		HWAddr: l.HWAddr.String(),
+		Expiry: expiryStr,
 		lease:  (*lease)(l),
 	})
 }
@@ -251,11 +259,9 @@ const (
 // Leases returns the list of current DHCP leases (thread-safe)
 func (s *Server) Leases(flags int) []Lease {
 	result := s.srv4.GetLeases(flags)
-
 	v6leases := s.srv6.GetLeases(flags)
-	result = append(result, v6leases...)
 
-	return result
+	return append(result, v6leases...)
 }
 
 // FindMACbyIP - find a MAC address by IP address in the currently active DHCP leases
