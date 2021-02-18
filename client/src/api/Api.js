@@ -2,11 +2,11 @@ import axios from 'axios';
 
 import { getPathWithQueryString } from '../helpers/helpers';
 import { QUERY_LOGS_PAGE_LIMIT, HTML_PAGES, R_PATH_LAST_PART } from '../helpers/constants';
-import { BASE_URL } from '../../constants';
+// import { BASE_URL } from '../../constants';
 
 class Api {
-    baseUrl = BASE_URL;
-
+    baseUrl = 'http://localhost/control';
+    //Fix BASE_URL
     async makeRequest(path, method = 'POST', config) {
         const url = `${this.baseUrl}/${path}`;
 

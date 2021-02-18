@@ -4,7 +4,7 @@ import { shallowEqual, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import classnames from 'classnames';
 import Menu from './Menu';
-import logo from '../ui/svg/logo.svg';
+import logo from './../../../public/assets/logo-ncsc-favicon.png';
 import './Header.css';
 
 const Header = () => {
@@ -46,12 +46,13 @@ const Header = () => {
                 <div className="header__column">
                     <div className="d-flex align-items-center">
                         <Link to="/" className="nav-link pl-0 pr-1">
-                            <img src={logo} alt="AdGuard Home logo" className="header-brand-img" />
+                            <img src={logo} alt="MiV-Sense logo" 
+                            className="header-brand-img" />
                         </Link>
                         {!processing && isCoreRunning
-                        && <span className={badgeClass}
-                        >{t(protectionEnabled ? 'on' : 'off')}
-                        </span>}
+                            && <span className={badgeClass}
+                            >{t(protectionEnabled ? 'on' : 'off')}
+                            </span>}
                     </div>
                 </div>
                 <Menu
@@ -62,9 +63,9 @@ const Header = () => {
                 <div className="header__column">
                     <div className="header__right">
                         {!processingProfile && name
-                        && <a href="control/logout" className="btn btn-sm btn-outline-secondary">
-                            {t('sign_out')}
-                        </a>}
+                            && <a href="control/logout" className="btn btn-sm btn-outline-secondary">
+                                {t('sign_out')}
+                            </a>}
                     </div>
                 </div>
             </div>

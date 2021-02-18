@@ -9,6 +9,7 @@ const PageTitle = ({
     <div className={containerClass}>
         <h1 className="page-title pr-2">{title}</h1>
         {children}
+       
     </div>
     {subtitle && <div className="page-subtitle">
         {subtitle}

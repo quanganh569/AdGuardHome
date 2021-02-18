@@ -9,6 +9,7 @@
         "generate": "rm -rf ./src/lib/entities ./src/lib/apis && ts-node --compiler-options  '{ \"module\": \"CommonJS\" }' ./scripts/generator/index.ts",
         "translations:check": "ts-node  --compiler-options  '{ \"module\": \"CommonJS\" }' ./scripts/plugins/checkTranslations.ts",
         "lint": "eslint -c ./scripts/lint/prod.js --ext .tsx --ext .ts ./",
+        "lint-fix": "yarn run lint --fix",
         "go:build": "cd .. && make REBUILD_CLIENT=0 build",
         "go:run": "sudo ../AdguardHome"
     },
