@@ -178,8 +178,12 @@ export const CLIENT_ID = {
 
 export const MENU_URLS = {
     root: '/',
+    devices:'/devices',
+    groups:"/groups",
     logs: '/logs',
     guide: '/guide',
+    alert: '/alerts',
+ 
 };
 
 export const SETTINGS_URLS = {

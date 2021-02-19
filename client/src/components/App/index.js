@@ -38,6 +38,9 @@ import DnsRewrites from '../../containers/DnsRewrites';
 import CustomRules from '../../containers/CustomRules';
 import Services from '../Filters/Services';
 import Logs from '../Logs';
+import Devices from '../Devices';
+import Groups from '../Groups';
+import Alert from '../Alert';
 
 const ROUTES = [
     {
@@ -52,6 +55,18 @@ const ROUTES = [
     {
         path: MENU_URLS.guide,
         component: SetupGuide,
+    },
+    {
+        path: MENU_URLS.devices,
+        component: Devices,
+    },
+    {
+        path: MENU_URLS.groups,
+        component: Groups,
+    },
+    {
+        path: MENU_URLS.alert,
+        component: Alert,
     },
     {
         path: SETTINGS_URLS.settings,

@@ -11,7 +11,8 @@ const MENU_ITEMS = [
     {
         route: MENU_URLS.root,
         exact: true,
-        icon: 'dashboard',
+        // icon: 'dashboard',
+        icon:"",
         text: 'dashboard',
         order: 0,
     },
@@ -20,18 +21,38 @@ const MENU_ITEMS = [
 
     // Filters dropdown should have visual order 2
 
+    // {
+    //     route: MENU_URLS.logs,
+    //     icon: 'log',
+    //     text: 'query_log',
+    //     order: 3,
+    // },
     {
-        route: MENU_URLS.logs,
-        icon: 'log',
-        text: 'query_log',
-        order: 3,
+        route: MENU_URLS.alert,
+        icon: '',
+        text: 'Alert',
+        order: 1,
     },
     {
-        route: MENU_URLS.guide,
-        icon: 'setup',
-        text: 'setup_guide',
+        route: MENU_URLS.devices,
+        icon: '',
+        text: 'Devices',
         order: 4,
     },
+    {
+        route: MENU_URLS.groups,
+        icon: '',
+        text: 'Groups',
+        order: 4,
+    },
+
+    // {
+    //     route: MENU_URLS.guide,
+    //     icon: 'setup',
+    //     text: 'setup_guide',
+    //     order: 4,
+    // },
+
 ];
 
 const SETTINGS_ITEMS = [
@@ -141,6 +162,7 @@ class Menu extends Component {
             <>
                 <div className={menuClass}>
                     <ul className="nav nav-tabs border-0 flex-column flex-lg-row flex-nowrap">
+
                         {MENU_ITEMS.map((item) => (
                             <li
                                 className={`nav-item order-${item.order}`}
@@ -153,22 +175,25 @@ class Menu extends Component {
                                 })}
                             </li>
                         ))}
-                        <li className="nav-item order-1">
+                 
+                        <li className="nav-item order-3">
                             {this.getDropdown({
-                                order: 1,
-                                label: 'settings',
-                                icon: 'settings',
-                                URLS: SETTINGS_URLS,
-                                ITEMS: SETTINGS_ITEMS,
-                            })}
-                        </li>
-                        <li className="nav-item order-2">
-                            {this.getDropdown({
-                                order: 2,
+                                order: 3,
                                 label: 'filters',
-                                icon: 'filters',
+                                // icon: 'filters',
+                                icon:'',
                                 URLS: FILTERS_URLS,
                                 ITEMS: FILTERS_ITEMS,
+                            })}
+                        </li>
+                        <li className="nav-item order-5">
+                            {this.getDropdown({
+                                order: 2,
+                                label: 'settings',
+                                // icon: 'settings',
+                                icon:'',
+                                URLS: SETTINGS_URLS,
+                                ITEMS: SETTINGS_ITEMS,
                             })}
                         </li>
                     </ul>

@@ -11,6 +11,8 @@ import BlockedDomains from './BlockedDomains';
 import PageTitle from '../ui/PageTitle';
 import Loading from '../ui/Loading';
 import './Dashboard.css';
+import InfiniteTable from '../Logs/InfiniteTable';
+import Logs from '../Logs';
 
 const Dashboard = ({
     getAccessList,
@@ -42,10 +44,10 @@ const Dashboard = ({
     });
 
     const refreshButton = <button
-            type="button"
-            className="btn btn-icon btn-outline-primary btn-sm"
-            title={t('refresh_btn')}
-            onClick={() => getAllStats()}
+        type="button"
+        className="btn btn-icon btn-outline-primary btn-sm"
+        title={t('refresh_btn')}
+        onClick={() => getAllStats()}
     >
         <svg className="icons">
             <use xlinkHref="#refresh" />
@@ -57,23 +59,23 @@ const Dashboard = ({
         : t('for_last_days', { count: stats.interval });
 
     const statsProcessing = stats.processingStats
-            || stats.processingGetConfig
-            || access.processing;
+        || stats.processingGetConfig
+        || access.processing;
 
     return <>
         <PageTitle title={t('dashboard')} containerClass="page-title--dashboard">
             <button
-                    type="button"
-                    className={buttonClass}
-                    onClick={() => toggleProtection(protectionEnabled)}
-                    disabled={processingProtection}
+                type="button"
+                className={buttonClass}
+                onClick={() => toggleProtection(protectionEnabled)}
+                disabled={processingProtection}
             >
                 <Trans>{buttonText}</Trans>
             </button>
             <button
-                    type="button"
-                    className="btn btn-outline-primary btn-sm"
-                    onClick={getAllStats}
+                type="button"
+                className="btn btn-outline-primary btn-sm"
+                onClick={getAllStats}
             >
                 <Trans>refresh_statics</Trans>
             </button>
@@ -82,37 +84,43 @@ const Dashboard = ({
         {!statsProcessing && <div className="row row-cards dashboard">
             <div className="col-lg-12">
                 <Statistics
-                        interval={stats.interval}
-                        dnsQueries={stats.dnsQueries}
-                        blockedFiltering={stats.blockedFiltering}
-                        replacedSafebrowsing={stats.replacedSafebrowsing}
-                        replacedParental={stats.replacedParental}
-                        numDnsQueries={stats.numDnsQueries}
-                        numBlockedFiltering={stats.numBlockedFiltering}
-                        numReplacedSafebrowsing={stats.numReplacedSafebrowsing}
-                        numReplacedParental={stats.numReplacedParental}
-                        refreshButton={refreshButton}
+                    interval={stats.interval}
+                    dnsQueries={stats.dnsQueries}
+                    blockedFiltering={stats.blockedFiltering}
+                    replacedSafebrowsing={stats.replacedSafebrowsing}
+                    replacedParental={stats.replacedParental}
+                    numDnsQueries={stats.numDnsQueries}
+                    numBlockedFiltering={stats.numBlockedFiltering}
+                    numReplacedSafebrowsing={stats.numReplacedSafebrowsing}
+                    numReplacedParental={stats.numReplacedParental}
+                    refreshButton={refreshButton}
                 />
+
+                {/* <InfiniteTable refreshButton={refreshButton}/> */}
             </div>
+
             <div className="col-lg-6">
                 <Counters
-                        subtitle={subtitle}
-                        refreshButton={refreshButton}
+                    subtitle={subtitle}
+                    refreshButton={refreshButton}
                 />
             </div>
             <div className="col-lg-6">
                 <Clients
-                        subtitle={subtitle}
-                        dnsQueries={stats.numDnsQueries}
-                        topClients={stats.topClients}
-                        clients={dashboard.clients}
-                        autoClients={dashboard.autoClients}
-                        refreshButton={refreshButton}
-                        processingAccessSet={access.processingSet}
-                        disallowedClients={access.disallowed_clients}
+                    subtitle={subtitle}
+                    dnsQueries={stats.numDnsQueries}
+                    topClients={stats.topClients}
+                    clients={dashboard.clients}
+                    autoClients={dashboard.autoClients}
+                    refreshButton={refreshButton}
+                    processingAccessSet={access.processingSet}
+                    disallowedClients={access.disallowed_clients}
                 />
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-12">
+                <Logs />
+            </div>
+            {/* <div className="col-lg-6">
                 <QueriedDomains
                         subtitle={subtitle}
                         dnsQueries={stats.numDnsQueries}
@@ -129,7 +137,7 @@ const Dashboard = ({
                         replacedParental={stats.numReplacedParental}
                         refreshButton={refreshButton}
                 />
-            </div>
+            </div> */}
         </div>}
     </>;
 };
