@@ -12,7 +12,7 @@ const MENU_ITEMS = [
         route: MENU_URLS.root,
         exact: true,
         // icon: 'dashboard',
-        icon:"",
+        icon: "",
         text: 'dashboard',
         order: 0,
     },
@@ -175,13 +175,13 @@ class Menu extends Component {
                                 })}
                             </li>
                         ))}
-                 
+
                         <li className="nav-item order-3">
                             {this.getDropdown({
                                 order: 3,
                                 label: 'filters',
                                 // icon: 'filters',
-                                icon:'',
+                                icon: '',
                                 URLS: FILTERS_URLS,
                                 ITEMS: FILTERS_ITEMS,
                             })}
@@ -191,7 +191,7 @@ class Menu extends Component {
                                 order: 2,
                                 label: 'settings',
                                 // icon: 'settings',
-                                icon:'',
+                                icon: '',
                                 URLS: SETTINGS_URLS,
                                 ITEMS: SETTINGS_ITEMS,
                             })}
