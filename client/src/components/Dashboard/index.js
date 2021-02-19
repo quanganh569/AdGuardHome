@@ -99,7 +99,7 @@ const Dashboard = ({
                 {/* <InfiniteTable refreshButton={refreshButton}/> */}
             </div>
 
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
                 <Counters
                     subtitle={subtitle}
                     refreshButton={refreshButton}
@@ -116,7 +116,7 @@ const Dashboard = ({
                     processingAccessSet={access.processingSet}
                     disallowedClients={access.disallowed_clients}
                 />
-            </div>
+            </div> */}
             <div className="col-lg-12">
                 <Logs />
             </div>

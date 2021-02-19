@@ -30,19 +30,19 @@ const MENU_ITEMS = [
     {
         route: MENU_URLS.alert,
         icon: '',
-        text: 'Alert',
+        text: 'alert',
         order: 1,
     },
     {
         route: MENU_URLS.devices,
         icon: '',
-        text: 'Devices',
+        text: 'devices',
         order: 4,
     },
     {
         route: MENU_URLS.groups,
         icon: '',
-        text: 'Groups',
+        text: 'groups',
         order: 4,
     },
 
