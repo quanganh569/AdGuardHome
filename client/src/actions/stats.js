@@ -1,6 +1,6 @@
 import { createAction } from 'redux-actions';
 
-import apiClient from '../api/Api';
+import apiClient from '../api/ApiDev';
 import {
     normalizeTopStats, secondsToMilliseconds, getParamsForClientsSearch, addClientInfo,
 } from '../helpers/helpers';
