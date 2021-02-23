@@ -68,10 +68,10 @@ const SETTINGS_ITEMS = [
         route: SETTINGS_URLS.encryption,
         text: 'encryption_settings',
     },
-    {
-        route: SETTINGS_URLS.clients,
-        text: 'client_settings',
-    },
+    // {
+    //     route: SETTINGS_URLS.clients,
+    //     text: 'client_settings',
+    // },
     {
         route: SETTINGS_URLS.dhcp,
         text: 'dhcp_settings',

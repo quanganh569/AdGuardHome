@@ -204,6 +204,10 @@ export const FILTERS_URLS = {
 
 export const SERVICES = [
     {
+        id: 'zalo',
+        name: 'Zalo',
+    },
+    {
         id: '9gag',
         name: '9Gag',
     },

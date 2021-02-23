@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-
+import Clients from "../../containers/Clients"
 class Devices extends Component {
 
     render() {
         return (
-            <h1>DEVICES</h1>
+            <>
+                <Clients/>
+            </>
         );
     }
 }
