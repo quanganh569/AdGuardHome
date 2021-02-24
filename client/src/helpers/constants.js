@@ -48,16 +48,16 @@ export const STATUS_COLORS = {
 };
 
 export const REPOSITORY = {
-    URL: 'https://github.com/AdguardTeam/AdGuardHome',
+    URL: 'https://khonggianmang.vn',
     TRACKERS_DB:
-        'https://github.com/AdguardTeam/AdGuardHome/tree/master/client/src/helpers/trackers/adguard.json',
-    ISSUES: 'https://github.com/AdguardTeam/AdGuardHome/issues/new/choose',
+        'https://khonggianmang.vn',
+    ISSUES: 'https://khonggianmang.vn',
 };
 
-export const PRIVACY_POLICY_LINK = 'https://adguard.com/privacy/home.html';
-export const PORT_53_FAQ_LINK = 'https://github.com/AdguardTeam/AdGuardHome/wiki/FAQ#bindinuse';
-export const UPSTREAM_CONFIGURATION_WIKI_LINK = 'https://github.com/AdguardTeam/AdGuardHome/wiki/Configuration#upstreams';
-export const GETTING_STARTED_LINK = 'https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started#update';
+export const PRIVACY_POLICY_LINK = 'https://khonggianmang.vn';
+export const PORT_53_FAQ_LINK = 'https://khonggianmang.vn';
+export const UPSTREAM_CONFIGURATION_WIKI_LINK = 'https://khonggianmang.vn';
+export const GETTING_STARTED_LINK = 'https://khonggianmang.vn';
 
 export const FILTERS_RELATIVE_LINK = '#filters';
 

@@ -44,7 +44,7 @@ const Footer = () => {
     const renderCopyright = () => <div className="footer__column">
         <div className="footer__copyright">
             {t('copyright')} &copy; {getYear()}{' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://adguard.com/">AdGuard</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://khonggianmang.com/govSOC">NCSC</a>
         </div>
     </div>;
 

@@ -46,7 +46,7 @@ const Header = () => {
                 <div className="header__column">
                     <div className="d-flex align-items-center">
                         <Link to="/" className="nav-link pl-0 pr-1">
-                            <img src={logo} alt="MiV-Sense logo"
+                            <img src={logo} alt="NCSC-Sense logo"
                             className="header-brand-img" />
                         </Link>
                         {!processing && isCoreRunning
