@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 import { Trans, useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import Statistics from './Statistics';
-import Counters from './Counters';
-import Clients from './Clients';
-import QueriedDomains from './QueriedDomains';
-import BlockedDomains from './BlockedDomains';
+// import Counters from './Counters';
+// import Clients from './Clients';
+// import QueriedDomains from './QueriedDomains';
+// import BlockedDomains from './BlockedDomains';
 
 import PageTitle from '../ui/PageTitle';
 import Loading from '../ui/Loading';
 import './Dashboard.css';
-import InfiniteTable from '../Logs/InfiniteTable';
+// import InfiniteTable from '../Logs/InfiniteTable';
 import Logs from '../Logs';
 
 const Dashboard = ({
     getAccessList,
     getStats,
     getStatsConfig,
-    dashboard,
+    // dashboard,
     dashboard: { protectionEnabled, processingProtection },
     toggleProtection,
     stats,
@@ -54,9 +54,9 @@ const Dashboard = ({
         </svg>
     </button>;
 
-    const subtitle = stats.interval === 1
-        ? t('for_last_24_hours')
-        : t('for_last_days', { count: stats.interval });
+    // const subtitle = stats.interval === 1
+    //     ? t('for_last_24_hours')
+    //     : t('for_last_days', { count: stats.interval });
 
     const statsProcessing = stats.processingStats
         || stats.processingGetConfig
@@ -95,49 +95,10 @@ const Dashboard = ({
                     numReplacedParental={stats.numReplacedParental}
                     refreshButton={refreshButton}
                 />
-
-                {/* <InfiniteTable refreshButton={refreshButton}/> */}
             </div>
-
-            {/* <div className="col-lg-6">
-                <Counters
-                    subtitle={subtitle}
-                    refreshButton={refreshButton}
-                />
-            </div>
-            <div className="col-lg-6">
-                <Clients
-                    subtitle={subtitle}
-                    dnsQueries={stats.numDnsQueries}
-                    topClients={stats.topClients}
-                    clients={dashboard.clients}
-                    autoClients={dashboard.autoClients}
-                    refreshButton={refreshButton}
-                    processingAccessSet={access.processingSet}
-                    disallowedClients={access.disallowed_clients}
-                />
-            </div> */}
             <div className="col-lg-12">
                 <Logs />
             </div>
-            {/* <div className="col-lg-6">
-                <QueriedDomains
-                        subtitle={subtitle}
-                        dnsQueries={stats.numDnsQueries}
-                        topQueriedDomains={stats.topQueriedDomains}
-                        refreshButton={refreshButton}
-                />
-            </div>
-            <div className="col-lg-6">
-                <BlockedDomains
-                        subtitle={subtitle}
-                        topBlockedDomains={stats.topBlockedDomains}
-                        blockedFiltering={stats.numBlockedFiltering}
-                        replacedSafebrowsing={stats.numReplacedSafebrowsing}
-                        replacedParental={stats.numReplacedParental}
-                        refreshButton={refreshButton}
-                />
-            </div> */}
         </div>}
     </>;
 };

@@ -6,7 +6,8 @@ import { QUERY_LOGS_PAGE_LIMIT, HTML_PAGES, R_PATH_LAST_PART } from '../helpers/
 
 class Api {
     baseUrl = 'http://localhost/control';
-    //Fix BASE_URL
+
+    // Fix BASE_URL
     async makeRequest(path, method = 'POST', config) {
         const url = `${this.baseUrl}/${path}`;
 

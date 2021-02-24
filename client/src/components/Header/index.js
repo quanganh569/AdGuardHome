@@ -4,7 +4,7 @@ import { shallowEqual, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import classnames from 'classnames';
 import Menu from './Menu';
-import logo from './../../../public/assets/logo.png';
+import logo from '../../../public/assets/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -46,7 +46,7 @@ const Header = () => {
                 <div className="header__column">
                     <div className="d-flex align-items-center">
                         <Link to="/" className="nav-link pl-0 pr-1">
-                            <img src={logo} alt="MiV-Sense logo" 
+                            <img src={logo} alt="MiV-Sense logo"
                             className="header-brand-img" />
                         </Link>
                         {!processing && isCoreRunning

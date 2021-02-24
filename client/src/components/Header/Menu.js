@@ -12,7 +12,7 @@ const MENU_ITEMS = [
         route: MENU_URLS.root,
         exact: true,
         // icon: 'dashboard',
-        icon: "",
+        icon: '',
         text: 'dashboard',
         order: 0,
     },

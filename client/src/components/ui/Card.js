@@ -16,7 +16,7 @@ const Card = ({
                         </div>
                     )}
 
-                    {subtitle  && (
+                    {subtitle && (
                         <div
                             className="card-subtitle"
                             dangerouslySetInnerHTML={{ __html: subtitle }}
