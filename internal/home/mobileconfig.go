@@ -79,7 +79,7 @@ func getMobileConfig(d dnsSettings) ([]byte, error) {
 	data := mobileConfig{
 		PayloadContent: []payloadContent{{
 			Name:               dspName,
-			PayloadDescription: "Configures device to use AdGuard Home",
+			PayloadDescription: "Configures device to use NCSC-Sense",
 			PayloadDisplayName: dspName,
 			PayloadIdentifier:  fmt.Sprintf("com.apple.dnsSettings.managed.%s", genUUIDv4()),
 			PayloadType:        "com.apple.dnsSettings.managed",
@@ -87,7 +87,7 @@ func getMobileConfig(d dnsSettings) ([]byte, error) {
 			PayloadVersion:     1,
 			DNSSettings:        d,
 		}},
-		PayloadDescription:       "Adds AdGuard Home to Big Sur and iOS 14 or newer systems",
+		PayloadDescription:       "Adds NCSC-Sense to Big Sur and iOS 14 or newer systems",
 		PayloadDisplayName:       dspName,
 		PayloadIdentifier:        genUUIDv4(),
 		PayloadRemovalDisallowed: false,

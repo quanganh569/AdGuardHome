@@ -1,4 +1,4 @@
-# AdGuard Home's DNS filtering go library
+# NCSC-Sense's DNS filtering go library
 
 Example use:
 ```bash

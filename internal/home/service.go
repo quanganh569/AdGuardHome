@@ -22,8 +22,8 @@ const (
 	launchdStdoutPath  = "/var/log/AdGuardHome.stdout.log"
 	launchdStderrPath  = "/var/log/AdGuardHome.stderr.log"
 	serviceName        = "AdGuardHome"
-	serviceDisplayName = "AdGuard Home service"
-	serviceDescription = "AdGuard Home: Network-level blocker"
+	serviceDisplayName = "NCSC-Sense service"
+	serviceDescription = "NCSC-Sense: Network-level blocker"
 )
 
 // Represents the program that will be launched by a service or daemon
@@ -225,7 +225,7 @@ func handleServiceInstallCommand(s service.Service) {
 
 	if detectFirstRun() {
 		log.Printf(`Almost ready!
-AdGuard Home is successfully installed and will automatically start on boot.
+NCSC-Sense is successfully installed and will automatically start on boot.
 There are a few more things that must be configured before you can use it.
 Click on the link below and follow the Installation Wizard steps to finish setup.`)
 		printHTTPAddresses("http")

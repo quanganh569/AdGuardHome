@@ -97,7 +97,7 @@ func (s *Server) enableDHCP(ifaceName string) (code int, err error) {
 	if err != nil {
 		if errors.Is(err, os.ErrPermission) {
 			// ErrPermission may happen here on Linux systems where
-			// AdGuard Home is installed using Snap.  That doesn't
+			// NCSC-Sense is installed using Snap.  That doesn't
 			// necessarily mean that the machine doesn't have
 			// a static IP, so we can assume that it has and go on.
 			// If the machine doesn't, we'll get an error later.

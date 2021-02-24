@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# AdGuard Home Release Script
+# NCSC-Sense Release Script
 #
 # The commentary in this file is written with the assumption that the
 # reader only has superficial knowledge of the POSIX shell language and
@@ -40,7 +40,7 @@ log() {
 	fi
 }
 
-log 'starting to build AdGuard Home release'
+log 'starting to build NCSC-Sense release'
 
 # Require the channel to be set.  Additional validation is performed
 # later by go-build.sh.
@@ -314,7 +314,7 @@ fi
 rm -f "$version_json"
 echo "{
   \"version\": \"${version}\",
-  \"announcement\": \"AdGuard Home ${version} is now available!\",
+  \"announcement\": \"NCSC-Sense ${version} is now available!\",
   \"announcement_url\": \"${version_history_url}\",
   \"selfupdate_min_version\": \"0.0\",
 " >> "$version_json"

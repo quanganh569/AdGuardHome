@@ -9,7 +9,7 @@ import (
 )
 
 // memoryUsage implements a couple of not really beautiful hacks which purpose is to
-// make OS reclaim the memory freed by AdGuard Home as soon as possible.
+// make OS reclaim the memory freed by NCSC-Sense as soon as possible.
 // See this for the details on the performance hits & gains:
 // https://github.com/AdguardTeam/AdGuardHome/internal/issues/2044#issuecomment-687042211
 func memoryUsage(args options) {

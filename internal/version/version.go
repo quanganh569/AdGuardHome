@@ -1,4 +1,4 @@
-// Package version contains AdGuard Home version information.
+// Package version contains NCSC-Sense version information.
 package version
 
 import (
@@ -27,14 +27,14 @@ const (
 	ChannelRelease     = "release"
 )
 
-// Channel returns the current AdGuard Home release channel.
+// Channel returns the current NCSC-Sense release channel.
 func Channel() (v string) {
 	return channel
 }
 
-// Full returns the full current version of AdGuard Home.
+// Full returns the full current version of NCSC-Sense.
 func Full() (v string) {
-	msg := "AdGuard Home, version %s, channel %s, arch %s %s"
+	msg := "NCSC-Sense, version %s, channel %s, arch %s %s"
 	if goarm != "" {
 		msg = msg + " v" + goarm
 	} else if gomips != "" {
@@ -44,18 +44,18 @@ func Full() (v string) {
 	return fmt.Sprintf(msg, version, channel, runtime.GOOS, runtime.GOARCH)
 }
 
-// GOARM returns the GOARM value used to build the current AdGuard Home release.
+// GOARM returns the GOARM value used to build the current NCSC-Sense release.
 func GOARM() (v string) {
 	return goarm
 }
 
-// GOMIPS returns the GOMIPS value used to build the current AdGuard Home
+// GOMIPS returns the GOMIPS value used to build the current NCSC-Sense
 // release.
 func GOMIPS() (v string) {
 	return gomips
 }
 
-// Version returns the AdGuard Home build version.
+// Version returns the NCSC-Sense build version.
 func Version() (v string) {
 	return version
 }

@@ -18,7 +18,7 @@ import (
 	"github.com/ameshkov/dnscrypt/v2"
 )
 
-// FilteringConfig represents the DNS filtering configuration of AdGuard Home
+// FilteringConfig represents the DNS filtering configuration of NCSC-Sense
 // The zero FilteringConfig is empty and ready for use.
 type FilteringConfig struct {
 	// Callbacks for other modules

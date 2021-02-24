@@ -1,12 +1,12 @@
 'openapi': '3.0.3'
 'info':
-  'title': 'AdGuard Home'
+  'title': 'NCSC-Sense'
   'description': >
-    AdGuard Home REST-ish API.  Our admin web interface is built on top of this
+    NCSC-Sense REST-ish API.  Our admin web interface is built on top of this
     REST-ish API.
   'version': '0.105'
   'contact':
-    'name': 'AdGuard Home'
+    'name': 'NCSC-Sense'
     'url': 'https://github.com/AdguardTeam/AdGuardHome'
 
 'servers':
@@ -23,13 +23,13 @@
 - 'name': 'filtering'
   'description': 'Rule-based filtering'
 - 'name': 'global'
-  'description': 'AdGuard Home server general settings and controls'
+  'description': 'NCSC-Sense server general settings and controls'
 - 'name': 'i18n'
   'description': 'Application localization'
 - 'name': 'install'
   'description': 'First-time install configuration handlers'
 - 'name': 'log'
-  'description': 'AdGuard Home query log'
+  'description': 'NCSC-Sense query log'
 - 'name': 'mobileconfig'
   'description': 'Apple .mobileconfig'
 - 'name': 'parental'
@@ -39,9 +39,9 @@
 - 'name': 'safesearch'
   'description': 'Enforce family-friendly results in search engines'
 - 'name': 'stats'
-  'description': 'AdGuard Home statistics'
+  'description': 'NCSC-Sense statistics'
 - 'name': 'tls'
-  'description': 'AdGuard Home HTTPS/DOH/DOT settings'
+  'description': 'NCSC-Sense HTTPS/DOH/DOT settings'
 
 'paths':
   '/status':
@@ -1194,7 +1194,7 @@
   'schemas':
     'ServerStatus':
       'type': 'object'
-      'description': 'AdGuard Home server status and configuration'
+      'description': 'NCSC-Sense server status and configuration'
       'required':
       - 'dns_addresses'
       - 'dns_port'
@@ -1473,7 +1473,7 @@
     'VersionInfo':
       'type': 'object'
       'description': >
-        Information about the latest available version of AdGuard Home.
+        Information about the latest available version of NCSC-Sense.
       'required':
       - 'disabled'
       'properties':
@@ -1486,7 +1486,7 @@
           'example': 'v0.9'
         'announcement':
           'type': 'string'
-          'example': 'AdGuard Home v0.9 is now available!'
+          'example': 'NCSC-Sense v0.9 is now available!'
         'announcement_url':
           'type': 'string'
           'example': >
@@ -2079,7 +2079,7 @@
           'example': 53
     'AddressesInfo':
       'type': 'object'
-      'description': 'AdGuard Home addresses configuration'
+      'description': 'NCSC-Sense addresses configuration'
       'required':
       - 'dns_port'
       - 'web_port'
@@ -2097,7 +2097,7 @@
           '$ref': '#/components/schemas/NetInterfaces'
     'AddressesInfoBeta':
       'type': 'object'
-      'description': 'AdGuard Home addresses configuration'
+      'description': 'NCSC-Sense addresses configuration'
       'required':
       - 'dns_port'
       - 'web_port'
@@ -2439,7 +2439,7 @@
     'InitialConfigurationBeta':
       'type': 'object'
       'description': >
-        AdGuard Home initial configuration for the first-install wizard.
+        NCSC-Sense initial configuration for the first-install wizard.
       'required':
       - 'dns'
       - 'web'
@@ -2461,7 +2461,7 @@
     'InitialConfiguration':
       'type': 'object'
       'description': >
-        AdGuard Home initial configuration for the first-install wizard.
+        NCSC-Sense initial configuration for the first-install wizard.
       'required':
       - 'dns'
       - 'web'

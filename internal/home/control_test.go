@@ -66,8 +66,8 @@ kXS9jgARhhiWXJrk
 		!data.ValidChain &&
 		data.ValidKey &&
 		data.KeyType == "RSA" &&
-		data.Subject == "CN=AdGuard Home,O=AdGuard Ltd" &&
-		data.Issuer == "CN=AdGuard Home,O=AdGuard Ltd" &&
+		data.Subject == "CN=NCSC-Sense,O=AdGuard Ltd" &&
+		data.Issuer == "CN=NCSC-Sense,O=AdGuard Ltd" &&
 		data.NotBefore.Equal(notBefore) &&
 		data.NotAfter.Equal(notAfter) &&
 		// data.DNSNames[0] ==  &&

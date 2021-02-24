@@ -12,7 +12,7 @@ LABEL maintainer="AdGuard Team <devteam@adguard.com>" \
   org.opencontainers.image.version=$VERSION \
   org.opencontainers.image.revision=$VCS_REF \
   org.opencontainers.image.vendor="AdGuard" \
-  org.opencontainers.image.title="AdGuard Home" \
+  org.opencontainers.image.title="NCSC-Sense" \
   org.opencontainers.image.description="Network-wide ads & trackers blocking DNS server" \
   org.opencontainers.image.licenses="GPL-3.0"
 

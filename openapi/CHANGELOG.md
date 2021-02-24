@@ -1,4 +1,4 @@
-# AdGuard Home API Change Log
+# NCSC-Sense API Change Log
 
 <!-- TODO(a.garipov): Reformat in accordance with the KeepAChangelog spec. -->
 
@@ -92,7 +92,7 @@ As well as other documentation fixes.
 
 * Added optional "offset" and "limit" parameters
 
-We are still using "older_than" approach in AdGuard Home UI, but we realize that it's easier to use offset/limit so here is this option now.
+We are still using "older_than" approach in NCSC-Sense UI, but we realize that it's easier to use offset/limit so here is this option now.
 
 
 ## v0.102: API changes
@@ -364,7 +364,7 @@ Response:
 
 ### A note about web user authentication
 
-If AdGuard Home's web user is password-protected, a web client must use authentication mechanism when sending requests to server.  Basic access authentication is the most simple method - a client must pass `Authorization` HTTP header along with all requests:
+If NCSC-Sense's web user is password-protected, a web client must use authentication mechanism when sending requests to server.  Basic access authentication is the most simple method - a client must pass `Authorization` HTTP header along with all requests:
 
 	Authorization: Basic BASE64_DATA
 

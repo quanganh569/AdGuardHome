@@ -40,7 +40,7 @@ func startHTTPServer(data string) (l net.Listener, portStr string) {
 func TestUpdateGetVersion(t *testing.T) {
 	const jsonData = `{
   "version": "v0.103.0-beta.2",
-  "announcement": "AdGuard Home v0.103.0-beta.2 is now available!",
+  "announcement": "NCSC-Sense v0.103.0-beta.2 is now available!",
   "announcement_url": "https://github.com/AdguardTeam/AdGuardHome/internal/releases",
   "selfupdate_min_version": "v0.0",
   "download_windows_amd64": "https://static.adguard.com/adguardhome/beta/AdGuardHome_windows_amd64.zip",
@@ -88,7 +88,7 @@ func TestUpdateGetVersion(t *testing.T) {
 	info, err := u.VersionInfo(false)
 	assert.Nil(t, err)
 	assert.Equal(t, "v0.103.0-beta.2", info.NewVersion)
-	assert.Equal(t, "AdGuard Home v0.103.0-beta.2 is now available!", info.Announcement)
+	assert.Equal(t, "NCSC-Sense v0.103.0-beta.2 is now available!", info.Announcement)
 	assert.Equal(t, "https://github.com/AdguardTeam/AdGuardHome/internal/releases", info.AnnouncementURL)
 	assert.Equal(t, "v0.0", info.SelfUpdateMinVersion)
 	if assert.NotNil(t, info.CanAutoUpdate) {
@@ -247,7 +247,7 @@ func TestUpdateWindows(t *testing.T) {
 func TestUpdater_VersionInto_ARM(t *testing.T) {
 	const jsonData = `{
   "version": "v0.103.0-beta.2",
-  "announcement": "AdGuard Home v0.103.0-beta.2 is now available!",
+  "announcement": "NCSC-Sense v0.103.0-beta.2 is now available!",
   "announcement_url": "https://github.com/AdguardTeam/AdGuardHome/internal/releases",
   "selfupdate_min_version": "v0.0",
   "download_linux_armv7": "https://static.adguard.com/adguardhome/beta/AdGuardHome_linux_armv7.tar.gz"
@@ -275,7 +275,7 @@ func TestUpdater_VersionInto_ARM(t *testing.T) {
 	info, err := u.VersionInfo(false)
 	assert.Nil(t, err)
 	assert.Equal(t, "v0.103.0-beta.2", info.NewVersion)
-	assert.Equal(t, "AdGuard Home v0.103.0-beta.2 is now available!", info.Announcement)
+	assert.Equal(t, "NCSC-Sense v0.103.0-beta.2 is now available!", info.Announcement)
 	assert.Equal(t, "https://github.com/AdguardTeam/AdGuardHome/internal/releases", info.AnnouncementURL)
 	assert.Equal(t, "v0.0", info.SelfUpdateMinVersion)
 	if assert.NotNil(t, info.CanAutoUpdate) {
@@ -286,7 +286,7 @@ func TestUpdater_VersionInto_ARM(t *testing.T) {
 func TestUpdater_VersionInto_MIPS(t *testing.T) {
 	const jsonData = `{
   "version": "v0.103.0-beta.2",
-  "announcement": "AdGuard Home v0.103.0-beta.2 is now available!",
+  "announcement": "NCSC-Sense v0.103.0-beta.2 is now available!",
   "announcement_url": "https://github.com/AdguardTeam/AdGuardHome/internal/releases",
   "selfupdate_min_version": "v0.0",
   "download_linux_mips_softfloat": "https://static.adguard.com/adguardhome/beta/AdGuardHome_linux_mips_softfloat.tar.gz"
@@ -314,7 +314,7 @@ func TestUpdater_VersionInto_MIPS(t *testing.T) {
 	info, err := u.VersionInfo(false)
 	assert.Nil(t, err)
 	assert.Equal(t, "v0.103.0-beta.2", info.NewVersion)
-	assert.Equal(t, "AdGuard Home v0.103.0-beta.2 is now available!", info.Announcement)
+	assert.Equal(t, "NCSC-Sense v0.103.0-beta.2 is now available!", info.Announcement)
 	assert.Equal(t, "https://github.com/AdguardTeam/AdGuardHome/internal/releases", info.AnnouncementURL)
 	assert.Equal(t, "v0.0", info.SelfUpdateMinVersion)
 	if assert.NotNil(t, info.CanAutoUpdate) {

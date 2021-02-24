@@ -24,7 +24,7 @@ import (
 	"github.com/AdguardTeam/golibs/log"
 )
 
-// Updater is the AdGuard Home updater.
+// Updater is the NCSC-Sense updater.
 type Updater struct {
 	client *http.Client
 
@@ -61,7 +61,7 @@ type Updater struct {
 	prevCheckResult VersionInfo
 }
 
-// Config is the AdGuard Home updater configuration.
+// Config is the NCSC-Sense updater configuration.
 type Config struct {
 	Client *http.Client
 

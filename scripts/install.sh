@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# AdGuard Home Installation Script
+# NCSC-Sense Installation Script
 #
 # 1. Download the package
 # 2. Unpack it
@@ -138,7 +138,7 @@ download()
 	if is_command curl ; then
 		curl -s "$1" --output "$2" || error_exit "Failed to download $1"
 	else
-		error_exit "curl is necessary to install AdGuard Home"
+		error_exit "curl is necessary to install NCSC-Sense"
 	fi
 }
 
@@ -174,7 +174,7 @@ is_command() {
 
 # Entry point
 main() {
-    log_info "Starting AdGuard Home installation script"
+    log_info "Starting NCSC-Sense installation script"
 
     CHANNEL=${1}
     if [ "${CHANNEL}" != "beta" ] && [ "${CHANNEL}" != "edge" ]; then
@@ -198,7 +198,7 @@ main() {
     URL="https://static.adguard.com/adguardhome/${CHANNEL}/${PKG_NAME}"
     OUT_DIR="/opt"
     if [ "${OS}" = "darwin" ]; then
-        # It may be important to install AdGuard Home to /Applications on MacOS
+        # It may be important to install NCSC-Sense to /Applications on MacOS
         # Otherwise, it may not grant enough privileges to it
         OUT_DIR="/Applications"
     fi
@@ -210,19 +210,19 @@ main() {
         log_info "Script called with root privileges"
     else
         if is_command sudo ; then
-            log_info "Please note, that AdGuard Home requires root privileges to install using this script."
+            log_info "Please note, that NCSC-Sense requires root privileges to install using this script."
             log_info "Restarting with root privileges"
 
             exec curl -sSL ${SCRIPT_URL} | sudo sh -s "$@"
             exit $?
         else
-            log_info "Root privileges are required to install AdGuard Home using this installer."
+            log_info "Root privileges are required to install NCSC-Sense using this installer."
             log_info "Please, re-run this script as root."
             exit 1
         fi
     fi
 
-    log_info "AdGuard Home will be installed to ${AGH_DIR}"
+    log_info "NCSC-Sense will be installed to ${AGH_DIR}"
 
     [ -d "${AGH_DIR}" ] && [ -n "$(ls -1 -A -q ${AGH_DIR})" ] && error_exit "Directory ${AGH_DIR} is not empty, abort installation"
 
@@ -236,12 +236,12 @@ main() {
       unpack "${PKG_NAME}" "${OUT_DIR}" "${PKG_EXT}" || error_exit "Cannot unpack the package"
     fi
 
-    # Install AdGuard Home service and run it.
+    # Install NCSC-Sense service and run it.
     ( cd "${AGH_DIR}" && ./AdGuardHome -s install || error_exit "Cannot install AdGuardHome as a service" )
 
     rm "${PKG_NAME}"
 
-    log_info "AdGuard Home is now installed and running."
+    log_info "NCSC-Sense is now installed and running."
     log_info "You can control the service status with the following commands:"
     log_info "  sudo ${AGH_DIR}/AdGuardHome -s start|stop|restart|status|install|uninstall"
 }

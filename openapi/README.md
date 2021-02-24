@@ -1,8 +1,8 @@
-# AdGuard Home OpenAPI
+# NCSC-Sense OpenAPI
 
 We are using
 [OpenAPI specification](https://swagger.io/docs/specification/about/)
-to generate AdGuard Home API specification.
+to generate NCSC-Sense API specification.
 
 ## How To Edit The API Spec
 
@@ -23,7 +23,7 @@ made.
 
 ## Authentication
 
-If AdGuard Home's web user is password-protected, a web client must use
+If NCSC-Sense's web user is password-protected, a web client must use
 authentication mechanism when sending requests to server.  Basic access
 authentication is the most simple method - a client must pass `Authorization`
 HTTP header along with all requests:

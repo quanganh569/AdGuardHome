@@ -1,4 +1,4 @@
-// Package home contains AdGuard Home's HTTP API methods.
+// Package home contains NCSC-Sense's HTTP API methods.
 package home
 
 import (
@@ -132,7 +132,7 @@ func setupContext(args options) {
 
 	Context.firstRun = detectFirstRun()
 	if Context.firstRun {
-		log.Info("This is the first time AdGuard Home is launched")
+		log.Info("This is the first time NCSC-Sense is launched")
 		checkPermissions()
 	}
 
@@ -219,7 +219,7 @@ func setupConfig(args options) {
 	}
 }
 
-// run performs configurating and starts AdGuard Home.
+// run performs configurating and starts NCSC-Sense.
 func run(args options) {
 	// configure config filename
 	initConfigFilename(args)
@@ -237,7 +237,7 @@ func run(args options) {
 	log.Println(version.Full())
 	log.Debug("Current working directory is %s", Context.workDir)
 	if args.runningAsService {
-		log.Info("AdGuard Home is running as a service")
+		log.Info("NCSC-Sense is running as a service")
 	}
 
 	setupContext(args)
@@ -353,9 +353,9 @@ func StartMods() error {
 	return nil
 }
 
-// Check if the current user permissions are enough to run AdGuard Home
+// Check if the current user permissions are enough to run NCSC-Sense
 func checkPermissions() {
-	log.Info("Checking if AdGuard Home has necessary permissions")
+	log.Info("Checking if NCSC-Sense has necessary permissions")
 
 	if runtime.GOOS == "windows" {
 		// On Windows we need to have admin rights to run properly
@@ -365,14 +365,14 @@ func checkPermissions() {
 			return
 		}
 
-		log.Fatal("This is the first launch of AdGuard Home. You must run it as Administrator.")
+		log.Fatal("This is the first launch of NCSC-Sense. You must run it as Administrator.")
 	}
 
-	// We should check if AdGuard Home is able to bind to port 53
+	// We should check if NCSC-Sense is able to bind to port 53
 	ok, err := util.CanBindPort(53)
 
 	if ok {
-		log.Info("AdGuard Home can bind to port 53")
+		log.Info("NCSC-Sense can bind to port 53")
 		return
 	}
 
@@ -381,11 +381,11 @@ func checkPermissions() {
 			if errno, ok := sysErr.Err.(syscall.Errno); ok && errno == syscall.EACCES {
 				msg := `Permission check failed.
 
-AdGuard Home is not allowed to bind to privileged ports (for instance, port 53).
+NCSC-Sense is not allowed to bind to privileged ports (for instance, port 53).
 Please note, that this is crucial for a server to be able to use privileged ports.
 
 You have two options:
-1. Run AdGuard Home with root privileges
+1. Run NCSC-Sense with root privileges
 2. On Linux you can grant the CAP_NET_BIND_SERVICE capability:
 https://github.com/AdguardTeam/AdGuardHome/internal/wiki/Getting-Started#running-without-superuser`
 
@@ -509,7 +509,7 @@ func configureLogger(args options) {
 
 // cleanup stops and resets all the modules.
 func cleanup(ctx context.Context) {
-	log.Info("Stopping AdGuard Home")
+	log.Info("Stopping NCSC-Sense")
 
 	if Context.web != nil {
 		Context.web.Close(ctx)
@@ -591,7 +591,7 @@ func printHTTPAddresses(proto string) {
 			log.Printf("Go to https://%s:%s", tlsConf.ServerName, port)
 		}
 	} else if config.BindHost.IsUnspecified() {
-		log.Println("AdGuard Home is available on the following addresses:")
+		log.Println("NCSC-Sense is available on the following addresses:")
 		ifaces, err := util.GetValidNetInterfacesForWeb()
 		if err != nil {
 			// That's weird, but we'll ignore it

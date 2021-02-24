@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# AdGuard Home Build Script
+# NCSC-Sense Build Script
 #
 # The commentary in this file is written with the assumption that the
 # reader only has superficial knowledge of the POSIX shell language and

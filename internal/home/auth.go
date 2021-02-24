@@ -83,7 +83,7 @@ func InitAuth(dbFilename string, users []User, sessionTTL uint32) *Auth {
 	if err != nil {
 		log.Error("Auth: open DB: %s: %s", dbFilename, err)
 		if err.Error() == "invalid argument" {
-			log.Error("AdGuard Home cannot be initialized due to an incompatible file system.\nPlease read the explanation here: https://github.com/AdguardTeam/AdGuardHome/internal/wiki/Getting-Started#limitations")
+			log.Error("NCSC-Sense cannot be initialized due to an incompatible file system.\nPlease read the explanation here: https://github.com/AdguardTeam/AdGuardHome/internal/wiki/Getting-Started#limitations")
 		}
 		return nil
 	}
