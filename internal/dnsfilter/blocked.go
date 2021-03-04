@@ -19,7 +19,7 @@ type svc struct {
 // client/src/helpers/constants.js
 // client/src/components/ui/Icons.js
 var serviceRulesArray = []svc{
-	{"zalo", []string{"||zalo.me/pc^", "||zalo.me^"}},
+	{"zalo", []string{"||zalo.me/pc^", "||zalo.me^","||zaloapp.com^"}},
 	{"whatsapp", []string{"||whatsapp.net^", "||whatsapp.com^"}},
 	{"facebook", []string{
 		"||facebook.com^",
