@@ -5,7 +5,7 @@ import flow from 'lodash/flow';
 import { withTranslation, Trans } from 'react-i18next';
 
 import * as actionCreators from '../../actions/login';
-import logo from '../../components/ui/svg/logo.svg';
+import logo from '../../components/ui/svg/wesafe_icon.png';
 import Toasts from '../../components/Toasts';
 import Footer from '../../components/ui/Footer';
 import Form from './Form';
@@ -35,8 +35,8 @@ class Login extends Component {
         return (
             <div className="login">
                 <div className="login__form">
-                    <div className="text-center mb-6">
-                        <img src={logo} className="h-6" alt="logo" />
+                    <div className="text-center">
+                        <img src={logo} width="50%" alt="logo" />
                     </div>
                     <Form onSubmit={this.handleSubmit} processing={processingLogin} />
                     <div className="login__info">
@@ -45,6 +45,7 @@ class Login extends Component {
                             className="btn btn-link login__link"
                             onClick={this.toggleText}
                         >
+                            
                             <Trans>forgot_password</Trans>
                         </button>
                         {isForgotPasswordVisible && (

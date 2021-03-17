@@ -499,6 +499,7 @@
     "password_label": "Password",
     "password_placeholder": "Enter password",
     "sign_in": "Sign in",
+    "sign_up":"Sign up",
     "sign_out": "Sign out",
     "forgot_password": "Forgot password?",
     "forgot_password_desc": "Please follow <0>these steps</0> to create a new password for your user account.",

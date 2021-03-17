@@ -496,6 +496,7 @@
     "password_label": "Mật khẩu",
     "password_placeholder": "Nhập mật khẩu",
     "sign_in": "Đăng nhập",
+    "sign_up":"Đăng ký",
     "sign_out": "Đăng xuất",
     "forgot_password": "Quên mật khẩu?",
     "forgot_password_desc": "Vui lòng làm theo <0>các bước này</0> để tạo mật khẩu mới cho tài khoản người dùng của bạn.",

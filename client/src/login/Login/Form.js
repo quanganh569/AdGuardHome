@@ -55,6 +55,13 @@ const Form = (props) => {
                     >
                         <Trans>sign_in</Trans>
                     </button>
+                    <button
+                        type="submit"
+                        className="btn btn-success btn-block"
+                        disabled={processing || invalid}
+                    >
+                        <Trans>sign_up</Trans>
+                    </button>
                 </div>
             </div>
         </form>

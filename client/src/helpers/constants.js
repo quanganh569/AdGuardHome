@@ -29,6 +29,7 @@ export const HTML_PAGES = {
     INSTALL: '/install.html',
     LOGIN: '/login.html',
     MAIN: '/',
+    SIGNUP:'/signup.html'
 };
 
 export const STATS_NAMES = {
@@ -578,6 +579,7 @@ export const FORM_NAME = {
     STATS_CONFIG: 'statsConfig',
     INSTALL: 'install',
     LOGIN: 'login',
+    SIGNUP:'signup',
     CACHE: 'cache',
     MOBILE_CONFIG: 'mobileConfig',
     ...DHCP_FORM_NAMES,
