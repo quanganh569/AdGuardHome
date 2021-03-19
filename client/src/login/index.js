@@ -8,11 +8,20 @@ import configureStore from '../configureStore';
 import reducers from '../reducers/login';
 import '../i18n';
 import Login from './Login';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Signup from '../signup/Signup';
 
 const store = configureStore(reducers, {}); // set initial state
 ReactDOM.render(
     <Provider store={store}>
+
         <Login />
+
     </Provider>,
+    // <Provider store={store}>
+    //     <Login />
+
+    //  </Provider>,
+
     document.getElementById('root'),
 );
